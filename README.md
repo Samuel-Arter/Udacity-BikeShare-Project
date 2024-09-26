@@ -15,9 +15,11 @@ Output of script will vary depending on user input
 ### Software and Libaries used
 
 **Python Version:**
+
 Python version 3.12.4 was used to create this script
 
 **Integrated development environment:**
+
 PyCharm community edition 2024.1.1 was used to edit script 
 
 **Libaries:**
