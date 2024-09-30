@@ -73,13 +73,16 @@ def get_filters():
     # get user input for day of week (or all)
     invalid = True
     while invalid:
+        try:
 
-        day = int(input("Select a day to filter by (pick an integer from 1 to 7, or 8 for 'all days'): ").strip())
+            day = int(input("Select a day to filter by (pick an integer from 1 to 7, or 8 for 'all days'): ").strip())
 
-        if day in range(1, 9):
-            invalid = False
-        else:
-            print("not a valid day, please try again")
+            if day in range(1, 9):
+                invalid = False
+            else:
+                print("not a valid day, please try again")
+        except:
+            print("Invalid input, please enter an integer from 1 - 8")
 
     print(f"\nYou have selected the city: {city}, month: {month}, day of week number: {day}")
 
