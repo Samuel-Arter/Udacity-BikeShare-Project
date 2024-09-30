@@ -149,12 +149,12 @@ def time_stats(df):
     # convert hour column to standard time using .apply
 
     df['Hour'] = df['Hour'].apply(standard_time)
+    df['Hour'] = df['Hour'].apply(lambda x: f"{x[0]} {x[1]}")
 
     # display the most common start hour
 
     common_hour = df['Hour'].mode()[0]
-    common_hour_str = ' '.join(str(x) for x in common_hour)
-    print(f"the most common start hour is {common_hour_str}")
+    print(f"the most common start hour is {common_hour}")
 
     print(f"\nThis took {time.time() - start_time} seconds.")
     print('-' * 40)
